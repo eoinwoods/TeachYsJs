@@ -38,7 +38,7 @@ Explore JavaScript Oddities
 
 Open the `qunit-plain-index.html` file in an editor and uncomment the `javascripttests.js` script.  Reload the page in a browser and you will see some more failing tests.
 
-This unit test allows you to explore the varioud oddities of the JavaScript language.  A few example tests have been provided for you to complete.  If you're not sure what to explore, think about some of the language features in the "Bad" and "Awful" appendices of Doug Crawford's _JavaScript the Good Parts_ book (links to the chapters on Safari: http://bit.ly/1g6Ep03 and http://bit.ly/1iFdFpD)
+This unit test allows you to explore the various oddities of the JavaScript language.  A few example tests have been provided for you to complete.  If you're not sure what to explore, think about some of the language features in the "Bad" and "Awful" appendices of Doug Crawford's _JavaScript the Good Parts_ book (links to the chapters on Safari: http://bit.ly/1g6Ep03 and http://bit.ly/1iFdFpD)
 
 Introducing Modularisation
 --------------------------
@@ -61,8 +61,9 @@ The absolute essentials of RequireJS can be found here: http://requirejs.org/doc
 The key points are that:
 
 * JavaScript files are turned into RequireJS modules by enclosing their content in the RequireJS function `define()` which allows the script's dependencies to be listed as well as the function that provides its content to be defined.
-* The `define()` function must return a JS object which provides the public interface to the module (i.e. a map of functions)
-* RequireJS works by including a special `<script>` tag in the main HTML file of the form `<script data-main="mymainscript" src="scripts/require.js"></script>` where `mymainscript` is the application's RequireJS boot script (less the ".js" suffix) and `scripts/require.js` is the location of the RequireJS library.
+* The function passed to `define()` must return a JS object which provides the public interface to the module (i.e. a map of functions)
+* RequireJS itself is loaded by including a special `<script>` tag in the main HTML file of the form `<script data-main="mymainscript" src="scripts/require.js"></script>` where `mymainscript` is the application's RequireJS boot script (less the ".js" suffix) and `scripts/require.js` is the location of the RequireJS library.
+* An application's RequireJS boot script defines a `require()` function to define its dependencies and bootstrap behaviour, which is called by RequireJS once the dependencies have been loaded and resolved.
 
 We now want to modularise the code we have, before we add more.
 
