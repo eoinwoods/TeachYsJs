@@ -7,7 +7,7 @@ Look in the `exercises` directory for the exercises to work through and the `sol
 solutions to them.  The `lib` directory contains local copies of 
 [RequireJS](http://www.requirejs.org), 
 [Underscore](http://www.underscorejs.org), 
-[Jasmine](http://pivotal.github.io/jasmine/) and 
+[Jasmine](https://jasmine.github.io/) and 
 [QUnit](http://qunitjs.com/) 
 for use in the exercises.
 
